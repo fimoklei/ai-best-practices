@@ -1,0 +1,15 @@
+# MCP
+
+References for Model Context Protocol (MCP) servers.
+
+## Table of contents
+
+- [Coding MCPs](#coding-mcps)
+
+## Coding MCPs
+
+
+| Name     | Purpose                                                                                                                                                    | When to use                                 | Link                                             |
+| ---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | -------------------------------------------------- |
+| Context7 | Context7 MCP pulls up-to-date, version-specific documentation and code examples straight from the source — and places them directly into your prompt.TODO | During sessions                             | [GitHub](https://github.com/upstash/context7)    |
+| n8n MCP  | A Model Context Protocol (MCP) server that provides AI assistants with comprehensive access to n8n node documentation, properties, and operations.         | When designing and developing N8n workflows | [Github](https://github.com/czlonkowski/n8n-mcp) |

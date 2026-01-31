@@ -1,0 +1,20 @@
+# Commands
+
+Reusable command templates that standardize how we plan and run AI work.
+
+## Table of contents
+- [PRD workflow commands](#prd-workflow-commands)
+- [Workflow commands](#workflow-commands)
+
+## PRD workflow commands
+| Name | Purpose | When to use | Link |
+| --- | --- | --- | --- |
+| Create PRD | Generate a clear, actionable PRD in Markdown from a feature prompt | When starting a new feature and need structured requirements | [./prd/create-prd.md](./prd/create-prd.md) |
+| Generate tasks | Create a detailed task list from an existing PRD for developers | After PRD is approved and you need implementation steps | [./prd/generate-tasks.md](./prd/generate-tasks.md) |
+| Process task | Process a specific task from the generated task list | When working through individual implementation tasks | [./prd/process-task.md](./prd/process-task.md) |
+
+## Workflow commands
+| Name | Purpose | When to use | Link |
+| --- | --- | --- | --- |
+| Learning opportunity | Capture and structure learning moments from work | When you discover something worth documenting or teaching | [./workflow/learning-opportunity.md](./workflow/learning-opportunity.md) |
+| Reflection | Guide end-of-session reflection for continuous improvement | At the end of a work session or project milestone | [./workflow/reflection.md](./workflow/reflection.md) |
