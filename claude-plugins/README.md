@@ -15,6 +15,7 @@ Curated Claude code plugins.
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
 | Claude-hud | Monitor claude code usage                                                                                                  | General claude code usage          | [GitHub](https://github.com/jarrodwatts/claude-hud)                           |
 | Hookify    | Easily create custom hooks to prevent unwanted behaviors by analyzing conversation patterns or from explicit instructions. | If you want to create custom hooks | [Github](https://github.com/anthropics/claude-code/tree/main/plugins/hookify) |
+| Everything Claude Code | Comprehensive Claude Code plugin collection with various utilities and enhancements for development workflows. | For various development needs | [GitHub](https://github.com/affaan-m/everything-claude-code/tree/main) |
 
 ## 🔬 Product development plugins
 
