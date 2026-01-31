@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Documentation Keeper Configuration",
+  "description": "Configuration schema for the documentation-keeper Claude Code skill",
+  "type": "object",
+  "properties": {
+    "documentationRoot": {
+      "type": "string",
+      "description": "Root directory for documentation files",
+      "default": "docs",
+      "examples": ["docs", "documentation", "wiki"]
+    },
+    "templateLocations": {
+      "type": "array",
+      "description": "Glob patterns for locating documentation templates",
+      "items": {
+        "type": "string"
+      },
+      "default": ["**/_TEMPLATE.md", "**/TEMPLATE.md"],
+      "examples": [
+        ["docs/**/_TEMPLATE.md"],
+        [".github/TEMPLATES/*.md", "docs/**/template.md"]
+      ]
+    },
+    "categories": {
+      "type": "object",
+      "description": "Documentation categories and their configurations",
+      "patternProperties": {
+        "^[a-z-]+$": {
+          "type": "object",
+          "required": ["path"],
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to this category's documentation"
+            },
+            "template": {
+              "type": "string",
+              "description": "Template file for this category"
+            },
+            "description": {
+              "type": "string",
+              "description": "Human-readable description of this category"
+            }
+          }
+        }
+      },
+      "examples": [
+        {
+          "reference": {
+            "path": "docs/reference",
+            "template": "docs/reference/_TEMPLATE.md",
+            "description": "Technical standards and patterns"
+          },
+          "architecture": {
+            "path": "docs/architecture",
+            "template": "docs/architecture/_TEMPLATE.md",
+            "description": "System design and architecture decisions"
+          }
+        }
+      ]
+    },
+    "updateTriggers": {
+      "type": "array",
+      "description": "Patterns that trigger documentation updates",
+      "items": {
+        "type": "string"
+      },
+      "examples": [
+        ["New feature in src/", "API change in api/", "Architecture change"]
+      ]
+    },
+    "validation": {
+      "type": "object",
+      "description": "Validation settings",
+      "properties": {
+        "checkLinks": {
+          "type": "boolean",
+          "description": "Validate all markdown links",
+          "default": true
+        },
+        "lintCodeExamples": {
+          "type": "boolean",
+          "description": "Run linter on code examples",
+          "default": true
+        },
+        "verifyTimestamps": {
+          "type": "boolean",
+          "description": "Check that timestamps are current",
+          "default": true
+        },
+        "checkCrossReferences": {
+          "type": "boolean",
+          "description": "Verify bidirectional linking",
+          "default": true
+        }
+      }
+    },
+    "timestampFormat": {
+      "type": "string",
+      "description": "Date format for Last Updated timestamps",
+      "default": "YYYY-MM-DD",
+      "examples": ["YYYY-MM-DD", "MM/DD/YYYY", "DD-MM-YYYY"]
+    },
+    "changelogLocation": {
+      "type": "string",
+      "description": "Path to project changelog",
+      "default": "CHANGELOG.md",
+      "examples": ["CHANGELOG.md", "docs/CHANGELOG.md", "HISTORY.md"]
+    },
+    "lintCommand": {
+      "type": "string",
+      "description": "Command to run for linting code examples",
+      "examples": ["npm run lint", "eslint", "pylint", "rubocop"]
+    }
+  },
+  "required": ["documentationRoot"],
+  "additionalProperties": false
+}
