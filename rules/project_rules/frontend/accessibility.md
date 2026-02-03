@@ -1,11 +1,11 @@
 # Accessibility
 
 ## Fundamentals
-- **Semantic HTML** — Use appropriate elements (`nav`, `main`, `button`, `article`) that convey meaning to assistive tech.
-- **Keyboard navigation** — All interactive elements accessible via keyboard with visible focus indicators.
-- **Color contrast** — Minimum 4.5:1 for normal text, 3:1 for large text. Don't rely on color alone to convey information.
-- **Alternative text** — Descriptive alt text for images. Meaningful labels for all form inputs.
-- **Heading hierarchy** — Use `h1`-`h6` in proper order to create clear document outline.
+- Use appropriate elements (`nav`, `main`, `button`, `article`) that convey meaning to assistive tech.
+- All interactive elements accessible via keyboard with visible focus indicators.
+- Minimum 4.5:1 for normal text, 3:1 for large text. Don't rely on color alone to convey information.
+- Descriptive alt text for images. Meaningful labels for all form inputs.
+- Use `h1`-`h6` in proper order to create clear document outline.
 
 ## ARIA
 - Use ARIA only when semantic HTML isn't sufficient.

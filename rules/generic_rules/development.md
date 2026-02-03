@@ -20,9 +20,16 @@ Use built-in solutions over custom ones. Self-explanatory names. Break complex p
 Build only for current requirements. No abstract layers for single implementations. No premature optimization. No "just in case" features.
 
 ## Code quality
-- Small files, functions, methods, and classes. No file over 300 lines — split along responsibility boundaries.
 - Use well-known patterns. Avoid niche technologies and libraries.
 - Unused-code cleanup is the last step in any solution plan.
+
+## File Organization
+MANY SMALL FILES > FEW LARGE FILES:
+
+- High cohesion, low coupling
+- 200-400 lines typical, 800 max
+- Extract utilities from large components
+- Organize by feature/domain, not by type
 
 ## Imports
 - Use path aliases (`@/`, `~/`) where configured. Avoid deep relative imports (`../../..`).
@@ -62,3 +69,14 @@ Build only for current requirements. No abstract layers for single implementatio
 - Include error code, message, and optional details for debugging.
 - HTTP status codes match error semantics (400 for bad request, 500 for server error, etc.).
 - Never expose technical details, stack traces, or internal paths to clients.
+
+## Code Quality Checklist
+Before marking work complete:
+- [ ] Code is readable and well-named
+- [ ] Functions are small (<50 lines)
+- [ ] Files are focused (<800 lines)
+- [ ] No deep nesting (>4 levels)
+- [ ] Proper error handling
+- [ ] No console.log statements
+- [ ] No hardcoded values
+- [ ] No mutation (immutable patterns used)
