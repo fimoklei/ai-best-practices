@@ -46,6 +46,7 @@ Cross-cutting standards for AI work, organized by scope and context.
 | --- | --- | --- | --- |
 | Communication | Communication guidelines and best practices | When collaborating or documenting | [./generic_rules/communication.md](./generic_rules/communication.md) |
 | Development | Development workflow and coding practices | During development work | [./generic_rules/development.md](./generic_rules/development.md) |
+| Documentation | Project documentation standards and structure | When creating or updating documentation | [./generic_rules/documentation.md](./generic_rules/documentation.md) |
 | Git | Git workflow and commit standards | When using version control | [./generic_rules/git.md](./generic_rules/git.md) |
 | Preferences | Tool preferences and configuration | When setting up development environment | [./generic_rules/preferences.md](./generic_rules/preferences.md) |
 | Security | Security guidelines and best practices | When handling security concerns | [./generic_rules/security.md](./generic_rules/security.md) |
