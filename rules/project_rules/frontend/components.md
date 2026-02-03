@@ -2,40 +2,36 @@
 
 ## Design Principles
 - **Single responsibility** — One clear purpose per component.
-- **Reusable** — Configurable via props for use across contexts.
-- **Composable** — Build complex UIs from smaller, simpler components. Not monolithic structures.
-- **Clear interface** — Explicit, well-documented props with sensible defaults.
-- **Minimal props** — If a component needs many props, consider composition or splitting it.
+- **Reusable** — Configurable via props.
+- **Composable** — Build complex UIs from smaller components. Avoid monolithic structures.
+- **Clear interface** — Explicit props with sensible defaults.
+- **Minimal props** — Many props signals need for composition or splitting.
 
 ## State Management
-- Keep state as local as possible. Lift only when multiple components need it.
-- Derive UI state from data sources (API cache, context, URL params) instead of duplicating in component state.
-- For forms: colocate validation logic with the form, not scattered across children.
+- Keep state local. Lift only when multiple components need it.
+- Derive UI state from data sources (API cache, context, URL params).
+- Colocate form validation with the form.
 
 ## Consistency
-- Follow naming conventions from team/project standards.
-- Consume design tokens (colors, spacing, typography) from a shared system. Don't hardcode values.
-- Keep internal implementation details private. Expose only necessary APIs.
+- Follow team naming conventions.
+- Consume design tokens (colors, spacing, typography) from shared system.
+- Keep implementation details private. Expose only necessary APIs.
 
 ## Data Fetching
-- Centralize fetch logic in hooks or utilities. Don't scatter fetch calls across components.
-- Handle loading and error states explicitly. Use Suspense boundaries or loading states, not inline conditionals scattered everywhere.
-- Cache strategically. Revalidate on mutation or time-based triggers.
+- Centralize fetch logic in hooks or utilities.
+- Handle loading and error states explicitly via Suspense or loading states.
+- Cache strategically. Revalidate on mutation or time triggers.
 
 ## Forms
-- Validation at submission boundary. Don't validate on every keystroke unless UX requires it.
-- Surface errors next to relevant fields and in summary when appropriate.
-- Keep validation schema (e.g., Zod, Yup) as single source of truth. Don't duplicate rules in UI logic.
+- Validate at submission boundary unless UX requires keystroke validation.
+- Surface errors next to fields and in summary.
+- Use validation schema (Zod, Yup) as single source of truth.
 
 ## Routing & Navigation
-- Colocate route config with pages. Use lazy loading for feature bundles.
-- Sync filters/sort state with URL params for shareable, bookmarkable URLs.
-- Provide metadata (title, description) per route for SEO and sharing.
+- Colocate route config with pages. Lazy load feature bundles.
+- Sync filters/sort with URL params for shareable URLs.
+- Provide metadata (title, description) per route.
 
 ## Testing
 - Test component behavior and user interactions, not implementation details.
 - Focus on what users see and do.
-
-## Documentation
-- Document component usage, props, and examples when non-obvious.
-- If a component has complex behavior or edge cases, document them inline or in adjacent docs.
