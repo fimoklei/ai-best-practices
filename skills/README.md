@@ -29,7 +29,10 @@ A catalog of reusable skills and mental models for AI work, organized by categor
 
 ## Backend skills
 
-*No skills available yet*
+
+| Name            | Purpose                                                                    | When to use                                 | Link                                                               |
+| ----------------- | ---------------------------------------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------------- |
+| Backend Patterns | Backend architecture patterns, API design, database optimization, and server-side best practices | When building scalable backend systems        | [./backend-skills/backend-patterns](./backend-skills/backend-patterns) |
 
 ## Frontend skills
 
@@ -38,6 +41,7 @@ A catalog of reusable skills and mental models for AI work, organized by categor
 | ----------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Agentation                  | Add Agentation visual feedback toolbar to a Next.js project                   | When developing front-end apps                                                                    | [./frontend-skills/agentation](./frontend-skills/agentation)                                   |
 | Frontend Design             | Create distinctive, production-grade frontend interfaces with high design quality | When building web components, pages, artifacts, posters, or applications                         | [./frontend-skills/frontend-design](./frontend-skills/frontend-design)                         |
+| Frontend Patterns           | Frontend development patterns for React, Next.js, state management, and performance optimization | When building modern frontend applications                                                       | [./frontend-skills/frontend-patterns](./frontend-skills/frontend-patterns)                     |
 | UI/UX Pro Max               | UI/UX design intelligence with 50 styles, 21 palettes, 50 font pairings, 20 charts | When designing UI components, choosing color palettes, reviewing UX code, or building interfaces   | [./frontend-skills/ui-ux-pro-max](./frontend-skills/ui-ux-pro-max)                             |
 | Vercel React Best Practices | React and Next.js performance optimization guidelines from Vercel Engineering | When writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns | [./frontend-skills/vercel-react-best-practices](./frontend-skills/vercel-react-best-practices) |
 
@@ -60,7 +64,10 @@ A catalog of reusable skills and mental models for AI work, organized by categor
 
 ## Product management skills
 
-*No skills available yet*
+
+| Name            | Purpose                                                                    | When to use                              | Link                                                               |
+| ----------------- | ---------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------- |
+| JTBD Analyzer    | Uncover the real "job" customers hire your product to do, beyond features to motivations | When understanding customer motivation   | [./productmanagement-skills/jtbd-analyzer](./productmanagement-skills/jtbd-analyzer) |
 
 ## Security skills
 

@@ -4,20 +4,12 @@ This repository curates best practices for AI workflows and concepts, organized 
 
 ## Table of contents
 - [Overview](#overview)
-- [Folder map](#folder-map)
-- [How to use this repo](#how-to-use-this-repo)
 
 ## Overview
 | Name | Purpose | When to use | Link |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
-
-## Folder map
-| Name | Purpose | When to use | Link |
-| --- | --- | --- | --- |
-| TODO | TODO | TODO | ./skills |
-
-## How to use this repo
-| Name | Purpose | When to use | Link |
-| --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| Skills | Reusable skills and mental models for AI work | When looking for specific AI capabilities or patterns | [./skills](./skills) |
+| Agents | Specialized AI agents for development tasks | When needing expert assistance for specific domains | [./agents](./agents) |
+| Commands | Reusable command templates for AI workflows | When standardizing AI work processes | [./commands](./commands) |
+| Rules | Development standards and best practices | When establishing coding guidelines | [./rules](./rules) |
+| Workflows | Workflow templates for repeatable processes | When defining structured AI workflows | [./workflows](./workflows) |

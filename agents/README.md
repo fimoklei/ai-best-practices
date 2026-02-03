@@ -1,23 +1,12 @@
 # Agents
 
-Guidance on designing and evaluating AI agents, including reusable patterns and capability guidance.
+Specialized AI agents for specific development tasks and architectural decisions.
 
 ## Table of contents
-- [Agent design patterns](#agent-design-patterns)
-- [Agent capabilities](#agent-capabilities)
-- [Agent evaluation](#agent-evaluation)
+- [Available agents](#available-agents)
 
-## Agent design patterns
+## Available agents
 | Name | Purpose | When to use | Link |
 | --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
-
-## Agent capabilities
-| Name | Purpose | When to use | Link |
-| --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
-
-## Agent evaluation
-| Name | Purpose | When to use | Link |
-| --- | --- | --- | --- |
-| TODO | TODO | TODO | TODO |
+| Architect | Software architecture specialist for system design, scalability, and technical decision-making | When planning new features, refactoring large systems, or making architectural decisions | [./architect.md](./architect.md) |
+| Security Reviewer | Security specialist for identifying vulnerabilities and ensuring secure coding practices | When security issues are found or before committing code with security implications | [./security-reviewer.md](./security-reviewer.md) |

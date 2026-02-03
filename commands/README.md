@@ -16,5 +16,7 @@ Reusable command templates that standardize how we plan and run AI work.
 ## Workflow commands
 | Name | Purpose | When to use | Link |
 | --- | --- | --- | --- |
+| Codemaps | Analyze codebase structure and update architecture documentation | When codebase structure changes significantly | [./workflow/codemaps.md](./workflow/codemaps.md) |
 | Learning opportunity | Capture and structure learning moments from work | When you discover something worth documenting or teaching | [./workflow/learning-opportunity.md](./workflow/learning-opportunity.md) |
 | Reflection | Guide end-of-session reflection for continuous improvement | At the end of a work session or project milestone | [./workflow/reflection.md](./workflow/reflection.md) |
+| Skill Create | Analyze local git history to extract coding patterns and generate SKILL.md files | When wanting to create skills from repository patterns | [./workflow/skill-create.md](./workflow/skill-create.md) |
