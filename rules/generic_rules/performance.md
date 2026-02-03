@@ -1,34 +1,33 @@
 # Performance Optimization
 
-## Model Selection Strategy
+## Model Selection
 
-**Haiku 4.5** (90% of Sonnet capability, 3x cost savings):
-- Lightweight agents with frequent invocation
+**Haiku 4.5** (lightweight, 3x cheaper):
+- Frequent invocation agents
 - Pair programming and code generation
 - Worker agents in multi-agent systems
 
-**Sonnet 4.5** (Best coding model):
+**Sonnet 4.5** (best coding):
 - Main development work
-- Orchestrating multi-agent workflows
+- Multi-agent orchestration
 - Complex coding tasks
 
-**Opus 4.5** (Deepest reasoning):
-- Complex architectural decisions
-- Maximum reasoning requirements
-- Research and analysis tasks
+**Opus 4.5** (deepest reasoning):
+- Architectural decisions
+- Research and analysis
 
-## Context Window Management
+## Context Window
 
-Avoid last 20% of context window for:
+Avoid last 20% for:
 - Large-scale refactoring
-- Feature implementation spanning multiple files
-- Debugging complex interactions
+- Multi-file features
+- Complex debugging
 
-Lower context sensitivity tasks:
+Lower sensitivity tasks:
 - Single-file edits
-- Independent utility creation
-- Documentation updates
-- Simple bug fixes
+- Utility creation
+- Documentation
+- Simple fixes
 
 ## Ultrathink + Plan Mode
 

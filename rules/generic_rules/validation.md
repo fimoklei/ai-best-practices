@@ -1,22 +1,22 @@
 # Validation
 
 ## Core Principles
-- **Server-side is mandatory** — Never trust client-side validation alone. Always validate on the server.
-- **Client-side for UX** — Provide immediate feedback to users, but duplicate checks server-side.
-- **Consistent validation** — Apply the same rules across all entry points (web forms, API endpoints, background jobs).
+- **Server-side mandatory** — Always validate server-side. Never trust client alone.
+- **Client-side for UX** — Immediate feedback, but duplicate checks server-side.
+- **Consistent rules** — Apply across all entry points (forms, APIs, background jobs).
 
-## Validation Rules
-- **Allowlists over blocklists** — Define what is allowed, not what to block.
-- **Type and format checking** — Validate data types, formats, ranges, required fields.
-- **Business rules at appropriate layer** — Domain constraints (sufficient balance, valid date ranges) validate in business logic, not at the boundary.
-- **Specific error messages** — Field-specific feedback that helps users correct input.
+## Rules
+- **Allowlists over blocklists** — Define what's allowed, not what to block.
+- **Type and format checking** — Validate types, formats, ranges, required fields.
+- **Business rules in logic layer** — Domain constraints (balance, date ranges) validate in business logic, not boundary.
+- **Specific errors** — Field-specific feedback helps users correct input.
 
 ## Schema Management
-- Centralize validation schemas in a shared location.
-- Reuse schemas across client forms, API handlers, and database operations.
-- Single source of truth for what constitutes valid data.
+- Centralize schemas in shared location.
+- Reuse across client forms, API handlers, database operations.
+- Single source of truth for valid data.
 
 ## Normalization
-- Normalize input before validation (trim whitespace, lowercase emails, coerce types).
-- Apply normalization consistently across all entry points.
-- Document normalization rules alongside validation schemas.
+- Normalize before validation (trim whitespace, lowercase emails, coerce types).
+- Apply consistently across entry points.
+- Document normalization rules alongside schemas.

@@ -1,42 +1,37 @@
-# Coding preferences
+# Coding Preferences
 
-## Language & style
-- TypeScript for all new code unless project context dictates otherwise.
-- Follow existing ESLint / Prettier configs. Don't introduce new linting rules without asking.
-- Destructure imports wherever sensible.
-- ES module syntax (import/export). Never CommonJS require.
+## Language & Style
+- TypeScript for all new code unless context dictates otherwise.
+- Follow existing ESLint/Prettier configs. Ask before introducing new rules.
+- Destructure imports where sensible.
+- ES module syntax (import/export). Never CommonJS.
 
 ## Naming
 - Files: kebab-case. Classes/interfaces: PascalCase. Functions/variables: camelCase. Constants: UPPER_SNAKE_CASE.
-- Name for what things do, not what they are — `fetchUserProfile` over `userProfileFetcher`.
-- Descriptive names that reveal intent. Avoid abbreviations and single-letter variables except in narrow contexts (loop indices, math).
+- Name for what things do, not what they are (`fetchUserProfile` over `userProfileFetcher`).
+- Descriptive names reveal intent. Avoid abbreviations except narrow contexts (loop indices, math).
 
 ## Comments
-- **Self-documenting code first** — Clear structure and naming over comments.
-- **Comment the why, never the what** — If code needs a what-comment, refactor instead.
-- **Evergreen comments only** — No comments about recent changes, fixes, or temporary states.
+- **Self-documenting first** — Clear structure and naming over comments.
+- **Comment why, never what** — If code needs what-comment, refactor.
+- **Evergreen only** — No recent changes, fixes, or temporary states.
 
 ### When to Comment
-- Module/file purpose at the top.
-- Public API contracts (function intent, params, return values).
+- Module/file purpose at top.
+- Public API contracts (intent, params, return values).
 - Non-obvious business logic or domain constraints.
-- Complex algorithms where the approach isn't immediately clear.
+- Complex algorithms where approach isn't clear.
 
 ### File Headers
-- One-line plain-language description of what the file does.
+- One-line plain-language description.
 - Use everyday wording. Non-engineers should understand.
-- Update when the file's role changes.
+- Update when file's role changes.
 
-### Cross-References
-- Link to supporting docs instead of duplicating information.
-- Format: `[See: docs/reference/file.md]` for tooling and reviewers.
-- Reference standards docs rather than repeating details.
+### Never Comment
+- Obvious code
+- Change history (use version control)
+- Commented-out code (delete it)
+- TODO without context or linked issue
 
-### What NOT to Comment
-- Obvious code ("increment counter").
-- Change history ("fixed bug on 2024-10-15") — use version control.
-- Commented-out code — delete it instead.
-- TODO without context or linked issue.
-
-## Output format
+## Output Format
 - Config files: valid JSON/YAML, no trailing commas.
