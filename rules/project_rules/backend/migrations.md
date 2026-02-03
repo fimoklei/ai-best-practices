@@ -1,3 +1,10 @@
+---
+paths:
+  - "migrations/**/*"
+  - "prisma/migrations/**/*"
+  - "**/migrations/**/*"
+---
+
 # Database Migrations
 
 ## Core Principles

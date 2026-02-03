@@ -1,3 +1,13 @@
+---
+paths:
+  - "**/*.css"
+  - "**/*.scss"
+  - "**/*.module.css"
+  - "**/globals.css"
+  - "tailwind.config.*"
+  - "postcss.config.*"
+---
+
 # CSS
 
 ## Fundamentals

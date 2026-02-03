@@ -1,3 +1,12 @@
+---
+paths:
+  - "tests/**/*"
+  - "**/*.test.ts"
+  - "**/*.test.tsx"
+  - "**/*.spec.ts"
+  - "**/*.spec.tsx"
+---
+
 ## Testing
 
 ## Core Principles

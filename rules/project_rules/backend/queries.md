@@ -1,3 +1,12 @@
+---
+paths:
+  - "**/*.queries.ts"
+  - "**/*.query.ts"
+  - "**/queries/**/*"
+  - "lib/**/queries/**/*"
+  - "server/**/queries/**/*"
+---
+
 ## Database Queries
 
 ### Security

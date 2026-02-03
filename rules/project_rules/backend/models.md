@@ -1,3 +1,12 @@
+---
+paths:
+  - "**/*.model.ts"
+  - "**/*.model.tsx"
+  - "**/models/**/*"
+  - "lib/**/models/**/*"
+  - "server/**/models/**/*"
+---
+
 ## Data Models
 
 ### Naming & Structure
