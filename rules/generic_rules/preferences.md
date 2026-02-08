@@ -7,7 +7,7 @@
 - ES module syntax (import/export). Never CommonJS.
 
 ## Naming
-- Files: kebab-case. Classes/interfaces: PascalCase. Functions/variables: camelCase. Constants: UPPER_SNAKE_CASE.
+- Files: kebab-case.
 - Name for what things do, not what they are (`fetchUserProfile` over `userProfileFetcher`).
 - Descriptive names reveal intent. Avoid abbreviations except narrow contexts (loop indices, math).
 
