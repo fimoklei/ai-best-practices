@@ -24,7 +24,7 @@ A catalog of reusable skills and mental models for AI work, organized by categor
 
 | Name               | Purpose                                                            | When to use                                               | Link                                                                       |
 | -------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| Session summarizer | Use when user runs /summarize command to capture session knowledge | User runs`/summarize` command to create a session summary | [./agentic-skills/session-summarizer](./agentic-skills/session-summarizer) |
+| Session summarizer | Use when user runs /summarize command to capture session knowledge | After or during a coding session | [./agentic-skills/session-summarizer](./agentic-skills/session-summarizer) |
 | Skill creator      | Formalize repeatable practices into skills                         | When you want a reusable workflow                         | [./agentic-skills/skill-creator](./agentic-skills/skill-creator)           |
 
 ## Backend skills
