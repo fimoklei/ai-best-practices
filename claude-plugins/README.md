@@ -17,6 +17,7 @@ Curated Claude code plugins.
 | Hookify    | Easily create custom hooks to prevent unwanted behaviors by analyzing conversation patterns or from explicit instructions. | If you want to create custom hooks | [GitHub](https://github.com/anthropics/claude-code/tree/main/plugins/hookify) |
 | Everything Claude Code | Comprehensive Claude Code plugin collection with various utilities and enhancements for development workflows. | For various development needs | [GitHub](https://github.com/affaan-m/everything-claude-code/tree/main) |
 | Homunculus | A Claude Code plugin that watches how you work, learns your patterns, and evolves itself to help you better. | For personalized AI assistance that adapts to your work style | [GitHub](https://github.com/humanplane/homunculus) |
+| Claude-Mem | Automatically captures Claude Code session activity, compresses it with AI, and injects relevant context into future sessions. | When you want persistent, searchable session memory | [GitHub](https://github.com/thedotmack/claude-mem) |
 
 ## 🔬 Product development plugins
 
