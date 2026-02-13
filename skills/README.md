@@ -26,6 +26,7 @@ A catalog of reusable skills and mental models for AI work, organized by categor
 | -------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | Session summarizer | Use when user runs /summarize command to capture session knowledge | After or during a coding session | [./agentic-skills/session-summarizer](./agentic-skills/session-summarizer) |
 | Skill creator      | Formalize repeatable practices into skills                         | When you want a reusable workflow                         | [./agentic-skills/skill-creator](./agentic-skills/skill-creator)           |
+| Karpathy guidelines | Behavioral guardrails to reduce LLM coding mistakes (think first, keep it simple, surgical diffs, goal-driven). | When writing, reviewing, or refactoring code | [./agentic-skills/karpathy-guidelines](./agentic-skills/karpathy-guidelines) |
 
 ## Backend skills
 
