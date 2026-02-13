@@ -9,62 +9,82 @@ paths:
 
 ## Testing
 
+Stack: Vitest + React Testing Library + Testing Library User Event
+
+Tests in `tests/` organized by type: `unit/`, `integration/`, `e2e/`
+
 ## Core Principles
-- Write failing tests before implementation (Red → Green → Refactor).
-- Focus on what code does, not how.
-- Each test runs independently. No shared state.
-- Tests produce same results every run. No flaky tests.
-- Unit tests run in milliseconds.
+- Focus on behavior, not implementation
+- Independent tests—no shared state
+- Fast unit tests (<100ms each)
+- Deterministic results—no flaky tests
 
 ## Test Types
-- **Unit** — Individual functions, utilities, components in isolation. Mock dependencies.
-- **Integration** — Components working together. API endpoints, database operations, service interactions.
-- **E2E** — Critical user flows. Use sparingly for essential paths.
+- **Unit** (`tests/unit/`) — Functions, utilities, components in isolation. Mock external dependencies.
+- **Integration** (`tests/integration/`) — Server actions, API routes, database operations.
+- **E2E** (`tests/e2e/`) — Critical user flows only. Use sparingly.
 
 ## TDD Workflow
-MANDATORY:
+Use `Skill(superpowers:test-driven-development)` for RED → GREEN → REFACTOR cycle before implementation.
 
-- Write test first (RED)
-- Run test → should FAIL
-- Write minimal implementation (GREEN)
-- Run test → should PASS
-- Refactor (IMPROVE)
-- Verify coverage (80%+)
+## Project-Specific Patterns
 
-## Test Structure
-- Explain what's tested and expected outcome.
-- Clear setup, execution, verification.
-- Focus on single behavior. Multiple assertions only when tightly coupled.
+### Next.js Testing
+- **Server Components:** Test data fetching logic in isolation
+- **Server Actions:** Mock `revalidatePath` and verify side effects
+- **API Routes:** Use `NextRequest`/`NextResponse` mocks from Next.js test utils
 
-## Mocking & Dependencies
-- Isolate units by mocking databases, APIs, file systems, external services.
-- Use real implementations for core business logic.
-- Document what is mocked and why.
+### React Testing Library
+- Query priority: getByRole → getByLabelText → getByText → getByTestId
+- Use `userEvent` over `fireEvent` for realistic interactions
+- Avoid testing implementation details (state, props, component internals)
 
-### Data Management
-- Reset database/state after each test suite.
-- Use fixtures or factories for test data. Avoid hardcoding.
-- Seed data through shared helpers.
+### Mocking Strategy
+- **MongoDB:** Mock mongoose models, not the database
+- **Next.js APIs:** Mock `revalidatePath`, `redirect`, `cookies()`, `headers()`
+- **External services:** Mock at module boundary, not deep in implementation
 
-## Coverage
-- Block merges below 80% threshold.
-- Business logic and critical paths require coverage.
-- Coverage doesn't guarantee quality. Focus on meaningful tests.
+## Coverage Requirements
+- **Threshold:** 80% minimum
+- **Priority areas:** Server actions, API routes, validation schemas, business logic
+- **Lower priority:** UI components (focus on behavior), type definitions
 
-## Troubleshooting Test Failures
-- Check test isolation. Tests sharing state or dependencies?
-- Verify mocks match actual behavior.
-- Fix implementation, not tests (unless test is wrong).
-- Review test assumptions. Preconditions still valid?
+Run: `npm test -- --coverage`
 
-## Type Safety
-- Maintain strict type checking in tests and implementation.
-- Address type errors. Never suppress.
-- Tests validate types match reality.
+## Quality Gates (Pre-Merge)
+```bash
+npm test              # All tests pass
+npm run type-check    # TypeScript strict mode
+npm run lint          # ESLint
+npm run build         # Production build succeeds
+```
 
-## Quality Gates
-- All tests pass
-- Coverage meets 80%+ threshold
-- Linter passes
-- Type checker passes
-- Build succeeds
+## Common Test Patterns
+
+### Testing Server Actions
+```typescript
+// Mock Next.js APIs
+vi.mock('next/cache', () => ({
+  revalidatePath: vi.fn(),
+}))
+
+// Test action result structure
+const result = await serverAction(data)
+expect(result.success).toBe(true)
+```
+
+### Testing Components with Client Interactions
+```typescript
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
+const user = userEvent.setup()
+await user.click(screen.getByRole('button'))
+```
+
+### Testing API Routes
+```typescript
+const request = new NextRequest('http://localhost:3000/api/...')
+const response = await GET(request, { params })
+expect(response.status).toBe(200)
+```
