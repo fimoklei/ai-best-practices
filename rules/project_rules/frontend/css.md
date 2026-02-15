@@ -8,27 +8,26 @@ paths:
   - "postcss.config.*"
 ---
 
-# CSS
+# CSS (Tailwind + shadcn/ui)
 
-## Fundamentals
-- **Consistent methodology** — Choose one approach (utility-first, BEM, CSS modules) and apply project-wide.
-- **Work with framework** — Avoid excessive overrides that fight framework patterns.
-- **Design tokens** — Use shared tokens (colors, spacing, typography). Avoid hardcoded values.
-- **Minimize custom CSS** — Leverage framework utilities.
-- **Performance** — Purge unused styles in production.
+## Stack
+- **Tailwind CSS** — utility-first, all styling via class names.
+- **shadcn/ui** — component primitives with built-in accessibility.
+- **`cn()` utility** — `lib/utils.ts` exports `cn(clsx(...), twMerge(...))` for conditional class merging.
 
-## Utility-First CSS (Tailwind, etc.)
-- Extend theme for project-specific tokens. Avoid hardcoding in markup.
-- Use layers (`@layer components`, `@layer utilities`) for custom additions.
-- Use merge utilities for dynamic class composition.
-- Adopt one dark mode strategy (data attribute or class) project-wide.
+## Conventions
+- Use Tailwind utilities directly. Avoid custom CSS unless absolutely necessary.
+- Extend theme in `tailwind.config` for project-specific tokens. No hardcoded color/spacing values.
+- Use `cn()` for dynamic class composition — never manual string concatenation.
+- Use `cva` (class-variance-authority) for component variant patterns.
+- One dark mode strategy project-wide (class-based via shadcn/ui theme provider).
 
-## Component Libraries
+## shadcn/ui
+- Customize via utility classes on component slots. Don't modify underlying component styles.
 - Preserve accessibility attributes (ARIA roles, props) when extending.
-- Adjust via utility classes on component slots. Avoid modifying underlying styles.
-- Use variant utilities (`cva`) to centralize style variants.
+- shadcn components live in `components/ui/` — treat as editable primitives.
 
 ## Custom CSS
 - Scope custom styles by feature. Document rationale.
-- Remove custom CSS when framework gains native support.
+- Remove custom CSS when Tailwind/shadcn gains native support.
 - Keep PostCSS plugins aligned with config.

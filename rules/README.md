@@ -10,7 +10,10 @@ Cross-cutting standards for AI work, organized by scope and context.
 ## Global standards
 | Name | Purpose | When to use | Link |
 | --- | --- | --- | --- |
-| Claude Configuration | Claude AI assistant configuration and behavior guidelines | When configuring Claude for development work | [./global/CLAUDE.md](./global/CLAUDE.md) |
+| Karpathy Coding Guidelines | Behavioral guardrails for Claude coding tasks | Apply to all coding work as baseline | [./global/karpathy-coding-guidelines.md](./global/karpathy-coding-guidelines.md) |
+| TDD Enforcement | Enforce red-green-refactor discipline and coverage expectations | When writing or updating code with tests | [./global/tdd-enforcement.md](./global/tdd-enforcement.md) |
+| Project Template | Template for project-level rules setup | When creating or refreshing project-specific standards | [./global/project-template.md](./global/project-template.md) |
+| Global Template | Template for new global standard docs | When adding a new global standard | [./global/global-template.md](./global/global-template.md) |
 
 ## Project rules
 | Category | Purpose | Files | Link |
@@ -18,7 +21,7 @@ Cross-cutting standards for AI work, organized by scope and context.
 | Backend | API, database, models, and query standards | 4 files | [./project_rules/backend/](./project_rules/backend/) |
 | Frontend | Components, CSS, accessibility, and responsive design | 4 files | [./project_rules/frontend/](./project_rules/frontend/) |
 | Testing | Testing principles, TDD workflow, and quality gates | 1 file | [./project_rules/testing/](./project_rules/testing/) |
-| Directory Structure | Project organization and file layout | 1 file | [./project_rules/directory-structure.md](./project_rules/directory-structure.md) |
+| Workflow | Project organization and file layout | 1 file | [./project_rules/workflow/](./project_rules/workflow/) |
 
 ### Backend rules
 | Name | Purpose | When to use | Link |
@@ -41,6 +44,11 @@ Cross-cutting standards for AI work, organized by scope and context.
 | --- | --- | --- | --- |
 | Testing | TDD workflow, test types, coverage, quality gates | When writing or organizing tests | [./project_rules/testing/testing.md](./project_rules/testing/testing.md) |
 
+### Workflow rules
+| Name | Purpose | When to use | Link |
+| --- | --- | --- | --- |
+| Directory Structure | Project organization and file layout | When setting up or reorganizing project structure | [./project_rules/workflow/directory-structure.md](./project_rules/workflow/directory-structure.md) |
+
 ## Generic rules
 | Name | Purpose | When to use | Link |
 | --- | --- | --- | --- |
@@ -49,6 +57,7 @@ Cross-cutting standards for AI work, organized by scope and context.
 | Documentation | Project documentation standards and structure | When creating or updating documentation | [./generic_rules/documentation.md](./generic_rules/documentation.md) |
 | Git | Git workflow and commit standards | When using version control | [./generic_rules/git.md](./generic_rules/git.md) |
 | Preferences | Tool preferences and configuration | When setting up development environment | [./generic_rules/preferences.md](./generic_rules/preferences.md) |
+| Performance | Performance considerations and optimization guidance | When designing or optimizing code for efficiency | [./generic_rules/performance.md](./generic_rules/performance.md) |
 | Security | Security guidelines and best practices | When handling security concerns | [./generic_rules/security.md](./generic_rules/security.md) |
 | Validation | Data validation and error handling | When implementing validation logic | [./generic_rules/validation.md](./generic_rules/validation.md) |
 | Workflows | Workflow patterns and automation | When designing or improving workflows | [./generic_rules/workflows.md](./generic_rules/workflows.md) |
