@@ -19,6 +19,7 @@ Curated Claude code plugins.
 | Homunculus | A Claude Code plugin that watches how you work, learns your patterns, and evolves itself to help you better. | For personalized AI assistance that adapts to your work style | [GitHub](https://github.com/humanplane/homunculus) |
 | Claude-Mem | Automatically captures Claude Code session activity, compresses it with AI, and injects relevant context into future sessions. | When you want persistent, searchable session memory | [GitHub](https://github.com/thedotmack/claude-mem) |
 | Andrej Karpathy Skills | Enforces Karpathy-inspired coding principles (think first, keep it simple, surgical diffs, goal-driven). | When you want disciplined execution guidance | [GitHub](https://github.com/forrestchang/andrej-karpathy-skills) |
+| Claude Code Setup | Analyzes your codebase and recommends tailored Claude Code automations (hooks, skills, MCP servers, subagents, slash commands). | When setting up Claude Code for a new project or optimizing an existing setup | [GitHub](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup) |
 
 ## 🔬 Product development plugins
 
