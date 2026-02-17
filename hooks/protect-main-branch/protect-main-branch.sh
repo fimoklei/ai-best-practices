@@ -15,7 +15,7 @@ if [ "$BRANCH" != "main" ] && [ "$BRANCH" != "master" ]; then
 fi
 
 # Block: git commit on main (direct commits bypass feature branch workflow)
-if echo "$COMMAND" | grep -qE '^git commit'; then
+if echo "$COMMAND" | grep -qE 'git commit'; then
   jq -n '{
     hookSpecificOutput: {
       hookEventName: "PreToolUse",
@@ -27,7 +27,7 @@ if echo "$COMMAND" | grep -qE '^git commit'; then
 fi
 
 # Block: git push --force on main (destructive rewrite of shared history)
-if echo "$COMMAND" | grep -qE '^git push\b.*--force|^git push\b.*-f\b'; then
+if echo "$COMMAND" | grep -qE 'git push\b.*--force|git push\b.*-f\b'; then
   jq -n '{
     hookSpecificOutput: {
       hookEventName: "PreToolUse",
