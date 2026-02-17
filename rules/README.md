@@ -1,17 +1,21 @@
-# Standards
+# Rules
 
-Cross-cutting standards for AI work, organized by scope and context.
+Rules for CLAUDE.md files, both globally and project-specific.
 
 ## Table of contents
-- [Global standards](#global-standards)
+- [Global rules](#global-rules)
 - [Project rules](#project-rules)
 - [Generic rules](#generic-rules)
 
-## Global standards
+## Global rules
+
+Templates and enforcement rules for CLAUDE.md files.
+
 | Name | Purpose | When to use | Link |
 | --- | --- | --- | --- |
-| Karpathy Coding Guidelines | Behavioral guardrails for Claude coding tasks | Apply to all coding work as baseline | [./global/karpathy-coding-guidelines.md](./global/karpathy-coding-guidelines.md) |
-| TDD Enforcement | Enforce red-green-refactor discipline and coverage expectations | When writing or updating code with tests | [./global/tdd-enforcement.md](./global/tdd-enforcement.md) |
+| Coding Guidelines | Behavioral guardrails to reduce common LLM coding mistakes | Apply to all coding work as baseline | [./global/coding-guidelines-template.md](./global/coding-guidelines-template.md) |
+| TDD Enforcement | Enforce red-green-refactor discipline and coverage expectations | When writing or updating code with tests | [./global/tdd-enforcement-template.md](./global/tdd-enforcement-template.md) |
+| Debugging | Systematic debugging process before proposing fixes | When encountering bugs, test failures, or unexpected behavior | [./global/debugging-template.md](./global/debugging-template.md) |
 | Project Template | Template for project-level rules setup | When creating or refreshing project-specific standards | [./global/project-template.md](./global/project-template.md) |
 | Global Template | Template for new global standard docs | When adding a new global standard | [./global/global-template.md](./global/global-template.md) |
 
