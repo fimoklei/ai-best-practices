@@ -1,6 +1,6 @@
 # Protect Main Branch Hook
 
-Blocks `git commit` and `git push` when on `main` or `master` branch. Forces feature branch workflow by denying the Bash tool call with a helpful error message.
+Prevents direct commits and force-pushes on `main` or `master` branch. Normal pushes are allowed (needed after merging feature branches).
 
 ## Installation
 
@@ -37,20 +37,25 @@ Blocks `git commit` and `git push` when on `main` or `master` branch. Forces fea
 
 1. Fires on every `Bash` tool call (PreToolUse event)
 2. Parses the tool input JSON from stdin using `jq`
-3. Checks if the command starts with `git commit` or `git push`
-4. If on `main` or `master`, outputs a `permissionDecision: "deny"` JSON response
-5. Claude Code reads the denial and stops the command before execution
+3. Exits immediately if not on `main` or `master`
+4. Blocks `git commit` — direct commits bypass feature branch workflow
+5. Blocks `git push --force` / `git push -f` — prevents destructive rewrite of shared history
+6. Allows everything else (normal push, checkout, branch, merge, etc.)
 
 ## Testing
 
 ```bash
-# Simulate a git commit on main
+# Simulate a git commit on main (should deny)
 echo '{"tool_input":{"command":"git commit -m test"}}' | bash protect-main-branch.sh
-# Should output deny JSON when on main branch
+
+# Simulate a force-push on main (should deny)
+echo '{"tool_input":{"command":"git push --force origin main"}}' | bash protect-main-branch.sh
+
+# Simulate a normal push on main (should pass through silently)
+echo '{"tool_input":{"command":"git push origin main"}}' | bash protect-main-branch.sh
 
 # Simulate a non-git command (should pass through silently)
 echo '{"tool_input":{"command":"ls -la"}}' | bash protect-main-branch.sh
-# Should produce no output
 ```
 
 ## Removal
